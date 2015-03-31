@@ -21,7 +21,6 @@ public class Keeble extends Card {
      */
     public void play(PlasterClash p) {
         super.play(p);
-        playToPlayZone(p);
         p.incKeebles();
     }
 

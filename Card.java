@@ -17,7 +17,8 @@ public class Card {
 
     public void play(PlasterClash p) {
         Player player = p.currentPlayer();
-        player.discardCard(this);
+        this.playToPlayZone(p);
+        player.getHand().remove(this);
     }
 
     public void playToPlayZone(PlasterClash p) {
@@ -40,7 +41,6 @@ public class Card {
         return this.gnome;
     }
 
-    @Override
     public Boolean equals(Card c) {
         return c.getName().equals(this.getName());
     }

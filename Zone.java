@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Zone {
 
@@ -40,7 +42,7 @@ public class Zone {
         for (Card card: this.cards) {
             zone.add(card);
         }
-        this.cards = new ArrayList<Card>();
+        this.cards.clear();
     }
 
     public int size() {
@@ -59,7 +61,8 @@ public class Zone {
     }
 
     public void shuffle() {
-
+        long seed = System.nanoTime();
+        Collections.shuffle(this.cards, new Random(seed));
     }
 
     public boolean contains(Card c) {
@@ -72,7 +75,9 @@ public class Zone {
     }
 
     public ArrayList<Card> discardAll() {
-        return this.cards;
+        ArrayList<Card> played = this.cards;
+        this.cards.clear();
+        return played;
     }
 
     public int getCardNumber() {

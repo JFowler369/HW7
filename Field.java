@@ -9,9 +9,11 @@ public class Field {
     public Field() {
         Gnome g1 = new Gnome();
         GardenBread gb1 = new GardenBread();
-        cards = new HashMap<Card, Integer>();
-        cards.put(g1, 20);
-        cards.put(gb1, 100);
+        CrazyGnome cg1 = new CrazyGnome();
+        this.cards = new HashMap<Card, Integer>();
+        this.cards.put(g1, 20);
+        this.cards.put(gb1, 100);
+        this.cards.put(cg1, 5);
     }
 
     public ArrayList<Card> cards() {
