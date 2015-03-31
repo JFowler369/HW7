@@ -1,5 +1,13 @@
+/**
+ * Represents The Player Deck.
+ * @author Jesse Fowler
+ * @version 1.0
+ */
 public class Tree extends Zone {
 
+    /** Creates a Tree Zone that acts as the players deck to draw from
+      * Starts with 9 Keeble and 1 Gnome
+      */
     public Tree() {
 
         this.get().clear();

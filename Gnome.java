@@ -1,7 +1,14 @@
 import java.util.ArrayList;
-
+/**
+ * Represents a Gnome card.
+ * @author Jesse Fowler
+ * @version 1.0
+ */
 public class Gnome extends Card {
 
+    /** Creates a Gnome card that is scorable and makes opponents discard when
+      * used
+      */
     public Gnome() {
       super("Gnome",
             "Add 1 to the player Score"
@@ -10,6 +17,9 @@ public class Gnome extends Card {
             true, 7);
     }
 
+    /** Makes opponents discard and removes card from play
+      * @param p The PlasterClash game that called the function
+      */
     @Override
     public void play(PlasterClash p) {
         ArrayList<Player> opponents = p.opponents();

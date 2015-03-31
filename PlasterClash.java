@@ -238,7 +238,6 @@ public class PlasterClash {
                         int idx = Integer.parseInt(blah);
                         cur.getHand().get(idx).play(game);
                     } catch (NumberFormatException | IndexOutOfBoundsException
-                            | NullPointerException
                         e) {
                         System.out.println("This is not a valid entry.");
                     }
