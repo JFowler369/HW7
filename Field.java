@@ -16,10 +16,12 @@ public class Field {
         Gnome g1 = new Gnome();
         GardenBread gb1 = new GardenBread();
         CrazyGnome cg1 = new CrazyGnome();
+        GardenParty gp1 = new GardenParty();
         this.cards = new HashMap<Card, Integer>();
         this.cards.put(g1, 20);
         this.cards.put(gb1, 100);
         this.cards.put(cg1, 5);
+        this.cards.put(gp1, 3);
     }
 
     /** Returns the Cards available for purchase

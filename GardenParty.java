@@ -3,19 +3,19 @@
  * @author Jesse Fowler
  * @version 1.0
  */
-public class CrazyGnome extends Card {
+public class GardenParty extends Card {
 
-    /** Creates a Crazy Gnome card that is scorable and reduces the
-      * Conspiracy meter by 2 when used
+    /** Creates a Garden Party card that isn't scorable and adds a gnome without
+      * increasing Conspiracy meter when used
       */
-    public CrazyGnome() {
+    public GardenParty() {
         super("Garden Party",
               "Discrete way to capture Gnomes without arousing suspicion",
               "An extravagant party meant to distract the Gnomes",
               false, 10);
     }
 
-    /** Reduces the Conspiracy meter by 2 and removes the gnome from play
+    /** Adds a Gnome to the player hand without increasing Meter
       * @param p The PlasterClash game calling the function
       */
     @Override
