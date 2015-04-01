@@ -80,11 +80,8 @@ public class Zone {
       * @param idx The Index of the card
       * @return The Card at that Index
       */
-    public Card get(int idx) {
-        if (this.cards.size() >= idx) {
-            return this.cards.get(idx);
-        }
-        return null;
+    public Card get(int idx) throws IndexOutOfBoundsException {
+        return this.cards.get(idx);
     }
 
     /** Returns the entire collection of Cards
