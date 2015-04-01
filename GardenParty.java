@@ -1,5 +1,5 @@
 /**
- * Represents a CrazyGnome card.
+ * Represents a GardenParty card.
  * @author Jesse Fowler
  * @version 1.0
  */
@@ -9,13 +9,10 @@ public class CrazyGnome extends Card {
       * Conspiracy meter by 2 when used
       */
     public CrazyGnome() {
-        super("Crazy Gnome",
-              "Add 1 to the player Score"
-              + "or use to release the Crazy Gnome back to the population"
-              + "to decrease suspicion.",
-              "A traumatized Gnome, in the attempt to warn his fellow Gnomes"
-              + " actually makes the threat seem ridiculous.",
-              true, 8);
+        super("Garden Party",
+              "Discrete way to capture Gnomes without arousing suspicion",
+              "An extravagant party meant to distract the Gnomes",
+              false, 10);
     }
 
     /** Reduces the Conspiracy meter by 2 and removes the gnome from play
@@ -23,10 +20,10 @@ public class CrazyGnome extends Card {
       */
     @Override
     public void play(PlasterClash p) {
-        p.addGnomeCount(-2);
+        p.currentPlayer().getHand().add(new Gnome());
         System.out.println();
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
-        System.out.println("| Gnome Released! Conspiracy meter reduced 2 |");
+        System.out.println("| Gnome Captured! Conspiracy meter unchanged |");
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
         p.currentPlayer().getHand().remove(this);
     }
